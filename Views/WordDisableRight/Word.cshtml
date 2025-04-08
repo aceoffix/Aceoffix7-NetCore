@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disable Right-Click in Word</title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            // Hide the custom toolbar
+            aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+</head>
+<body>
+    <div style="color:Red">After opening the Word document, try right-clicking the mouse. You'll find that the right-click function is disabled.</div>
+    <div style="width: auto;height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

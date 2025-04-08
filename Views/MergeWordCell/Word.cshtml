@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+</head>
+<body>
+    <div id="textcontent" style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.Caption = "Generate Test Papers";
+            aceoffixctrl.CustomToolbar = false;
+        }
+
+    </script>
+
+</head>
+<body>
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

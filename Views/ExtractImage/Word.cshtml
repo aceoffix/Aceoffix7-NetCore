@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrieve Images from a Word Document on Save</title>
+    <script type="text/javascript">
+        function Save() {
+            aceoffixctrl.SaveDataPage = "/ExtractImage/SaveData";
+            aceoffixctrl.WebSave();
+            var value = aceoffixctrl.CustomSaveResult;
+            alert(value);
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save Image", "Save", 1);
+        }
+    </script>
+</head>
+<body>
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

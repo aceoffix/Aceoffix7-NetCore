@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<title> CommentOnly</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Save() {
+			var saveUrl = "/CommentOnly/SaveDoc";
+			aceoffixctrl.SaveFilePage = saveUrl;
+			aceoffixctrl.WebSave();
+		}
+
+         function newComment() {
+          aceoffixctrl.word.InsertComment();
+        }
+
+        function OnAceoffixCtrlInit() {
+           aceoffixctrl.AddCustomToolButton("Save", "Save()", 1);
+           aceoffixctrl.AddCustomToolButton("Insert Comment", "newComment()", 0);
+        }
+	</script>
+
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

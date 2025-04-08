@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        s
+                function SaveAs() {
+                    aceoffixctrl.ShowDialog(3);
+                }
+                function PrintSet() {
+                    aceoffixctrl.ShowDialog(5);
+                }
+                function PrintFile() {
+                    aceoffixctrl.ShowDialog(4);
+                }
+                function Close() {
+                    aceoffixctrl.CloseWindow();
+                }
+                function IsFullScreen() {
+                    aceoffixctrl.FullScreen =
+                        !aceoffixctrl.FullScreen;
+                }
+                function OnAceoffixCtrlInit() {
+                    aceoffixctrl.AddCustomToolButton("SaveAs", "SaveAs", 5);
+                    aceoffixctrl.AddCustomToolButton("PrintSet", "PrintSet", 8);
+                    aceoffixctrl.AddCustomToolButton("Print", "PrintFile", 6);
+                    aceoffixctrl.AddCustomToolButton("FullScreen", "IsFullScreen", 4);
+                    aceoffixctrl.AddCustomToolButton("Close", "Close", 9);
+                }
+    </script>
+</head>
+<body>
+    <div style="width: auto; height: 98vh;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

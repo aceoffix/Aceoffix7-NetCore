@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Save() {
+            var id = "@Html.Raw(ViewBag.id)";
+            var myObject = {};
+            myObject.id = id;
+            var params = new URLSearchParams(myObject);
+            var saveUrl = "/WordSalaryBill/SaveData";
+            aceoffixctrl.SaveDataPage = `${saveUrl}?${params.toString()}`;
+            aceoffixctrl.WebSave();
+            pageofficectrl.WebSave();
+        }
+        function OnAceoffixCtrlInit() {
+             aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+         }
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div style="width: auto; height: 900px;">
+            @Html.Raw(ViewBag.err)
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

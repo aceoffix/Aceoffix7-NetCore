@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove the Row Containing a Specific Cell in a Word Table</title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.CustomToolbar = false; // Hide the custom toolbar
+        }
+    </script>
+</head>
+<body>
+    <div style="color:Red">The row containing the cell at coordinates (2,1) in the table has been deleted. Please check the original template document at the path  @Html.Raw(ViewBag.FilePath).</div>
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

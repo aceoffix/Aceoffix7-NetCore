@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert a Page Break into the Current Word Document Using Server-Side Methods</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/InsertPageBreak2/SaveDoc";
+            aceoffixctrl.SaveFilePage = saveUrl;
+            aceoffixctrl.WebSave();
+            if (aceoffixctrl.CustomSaveResult == "ok") {
+                alert("Saved successfully!\nPlease check the merged document \"test3.docx\" in the InsertPageBreak2/doc directory.");
+            }
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+
+    </script>
+    <div style=" width:auto; height:900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

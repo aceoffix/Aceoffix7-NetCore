@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Excel Template</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3" />
+    <meta http-equiv="description" content="This is my page" />
+
+    <script type="text/javascript" src="../aceoffix.js"></script>
+</head>
+<body style="text-align:center;">
+    <div style="text-align:left;margin-top:30px;">
+        <span>1. Demonstration of assigning a value to a region defined with a name in an Excel template, allowing data from each cell within this region to be retrieved upon saving:</span><br /><br />
+        <a href="javascript:AceBrowser.openWindow('ExcelFill' , 'width=1200px;height=800px;');">Simple usage of the openTableByDefinedName method</a>
+    </div>
+    <div style="text-align:left; margin-top:30px;">
+        <span>2. Demonstration of how to populate data into two different custom Excel templates without modifying the code, resulting in different display effects:</span><br /><br />
+        <a href="javascript:AceBrowser.openWindow('ExcelFill2?temp=temp1.xlsx' , 'width=1200px;height=800px;');">Display effect of Custom Excel Template One</a><br /><br />
+        <a href="javascript:AceBrowser.openWindow('ExcelFill2?temp=temp2.xlsx' , 'width=1200px;height=800px;');">Display effect of Custom Excel Template Two</a>
+    </div>
+    <div style="text-align:left; margin-top:30px;">
+        <span>3. Demonstration of filling data into the same Excel template using the openTable and openTableByDefinedName methods, showing different results when dynamically filled data expands based on actual data rows:</span><br /><br />
+        <a href="javascript:AceBrowser.openWindow('ExcelFill6' , 'width=1200px;height=800px;');">Open template (test4.xlsx)</a><br /><br />
+        <a href="javascript:AceBrowser.openWindow('ExcelFill4' , 'width=1200px;height=800px;');">Effect of filling data into template (test4.xlsx) using openTable —— overlapping tables issue</a><br /><br />
+        <a href="javascript:AceBrowser.openWindow('ExcelFill5' , 'width=1200px;height=800px;');">Effect of filling data into template (test4.xlsx) using openTableByDefinedName —— tables remain unaffected</a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+﻿
+@{ Layout = null; }
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Open a Word Document Using AceBrowser</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- The js file must be referenced -->
+    <script type="text/javascript" src="../aceoffix.js"></script>
+    <script type="text/javascript">
+        var count = 0;
+        function updateCount(value) {
+            count = count + parseInt(value);
+            document.getElementById("Text1").value = count;
+            return count.toString();
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:AceBrowser.openWindow('Word', 'width=1200px;height=800px;');">Open a Word Document Using AceBrowser</a>
+    <br>
+    <br>
+    <br>
+    <div>Count=<input id="Text1" type="text" value="0" /></div>
+</body>
+</html>
+
+

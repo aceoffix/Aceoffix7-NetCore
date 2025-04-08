@@ -1,0 +1,107 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Word.cs" Inherits="Aceoffix7_Net.CommentsList.Word" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Comments Management</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/CommentsList/SaveFile";
+           aceoffixctrl.SaveFilePage = saveUrl;
+           aceoffixctrl.WebSave();
+        }
+
+        function AfterDocumentOpened() {
+            refreshList();
+        }
+
+        function OnAceoffixCtrlInit() {
+           aceoffixctrl.OfficeToolbars = false;
+           aceoffixctrl.AddCustomToolButton("Save", "Save()", 1);
+           aceoffixctrl.AddCustomToolButton("New Comment", "InsertComment()", 3);
+        }
+
+        function refreshList() {
+            document.getElementById("ul_Comments").innerHTML = "";
+
+            let commentsListJson = JSON.parse(aceoffixctrl.word.CommentsAsJson)
+            for (let item of commentsListJson) {
+                let itemDate = dateFormat(item.date, 'yyyy-MM-dd HH:mm');
+                document.getElementById("ul_Comments").innerHTML += "<li><a href='#' onclick='goToComment(" + item.id + ")'>"
+                    + itemDate + "<br />[" + item.author + "]:" +aceoffixctrl.word.GetTextFromComment(parseInt(item.id)) + "</a></li>"
+            }
+        }
+
+        function goToComment(index) {
+           aceoffixctrl.word.SelectComment(index);
+        }
+
+        function Button1_onclick() {
+           aceoffixctrl.word.InsertComment(document.getElementById("Text1").value);
+            refreshList();
+            document.getElementById("Text1").value = "";
+        }
+
+        function Button2_onclick() {
+            refreshList();
+        }
+
+        function InsertComment() {
+           aceoffixctrl.word.InsertComment();
+        }
+
+        function dateFormat(date, format) {
+            date = new Date((date - 25569) * 86400 * 1000);
+            date = roundTimeToSeconds(date);
+            date.setHours(date.getHours() - 8);
+            var o = {
+                'M+': date.getMonth() + 1, // month
+                'd+': date.getDate(), // day
+                'H+': date.getHours(), // hour
+                'm+': date.getMinutes(), // minute
+                's+': date.getSeconds(), // second
+                'q+': Math.floor((date.getMonth() + 3) / 3), // quarter
+                'S': date.getMilliseconds() // millisecond
+            };
+
+            if (/(y+)/.test(format))
+                format = format.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
+
+            for (var k in o)
+                if (new RegExp('(' + k + ')').test(format))
+                    format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length));
+
+            return format;
+        }
+
+        function roundTimeToSeconds(date) {
+            var seconds = date.getSeconds();
+            if (seconds < 30) {
+                date.setSeconds(0);
+            } else {
+                date.setSeconds(0);
+                date.setMinutes(date.getMinutes() + 1);
+            }
+            return date;
+        }
+    </script>
+    <form id="form1" runat="server">
+    <div style="width:1280px; height:700px;">
+        <div id="Div_Comments" style="float:left; width:220px; height:700px; border:solid 1px red;">
+            <h3>Comment List</h3>
+            <input id="Button2" type="button" value="Refresh" onclick="return Button2_onclick()" />
+            <ul id="ul_Comments">            
+            </ul>
+        </div>
+        <div style="width:1050px; height:700px; float:right;">
+            <input id="Button1" type="button" value="Insert Comment" onclick="return Button1_onclick()" /> 
+            <input id="Text1" type="text" />
+            <%=aceCtrl.GetHtml()%> 
+        </div>
+    </div>
+    </form>
+</body>
+</html>

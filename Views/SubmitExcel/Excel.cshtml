@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function SaveData() {
+            aceoffixctrl.SaveDataPage = "/SubmitExcel/SaveData";
+            aceoffixctrl.WebSave();
+            alert("save result:\r\n" + aceoffixctrl.CustomSaveResult);
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.Caption = "Excel spreadsheet used as an input form.";
+            // Create custom toolbar
+            aceoffixctrl.AddCustomToolButton("Save", "SaveData()", 1);
+            aceoffixctrl.AddCustomToolButton("-", "", 0);
+            aceoffixctrl.AddCustomToolButton("Print", "ShowPrintDlg()", 6);
+            aceoffixctrl.AddCustomToolButton("-", "", 0);
+            aceoffixctrl.AddCustomToolButton("Full-screen Switch", "SwitchFullScreen()", 4);
+        }
+        function ShowPrintDlg() {
+            aceoffixctrl.ShowDialog(4); //Print dialog box
+        }
+        function SwitchFullScreen() {
+            aceoffixctrl.FullScreen = !aceoffixctrl.FullScreen;
+        }
+    </script>
+</head>
+<body style="overflow:hidden">
+    <form id="form1">
+        <div style="width: auto;height: 900px;">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

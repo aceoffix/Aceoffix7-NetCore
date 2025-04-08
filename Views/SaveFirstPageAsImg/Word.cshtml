@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Word First Page as Image</title>
+    <script type="text/javascript">
+        function Save() {
+            aceoffixctrl.SaveFilePage = "/SaveFirstPageAsImg/SaveDoc";
+            aceoffixctrl.WebSave();
+        }
+
+        function SaveFirstAsImg() {
+            aceoffixctrl.SaveFilePage = "/SaveFirstPageAsImg/SaveDoc";
+            aceoffixctrl.WebSaveAsImage();
+            alert('The image has been saved to the "SaveFirstPageAsImg/doc/" directory.');
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save()", 1);
+            aceoffixctrl.AddCustomToolButton("Save First Page as Image", "SaveFirstAsImg()", 1);
+        }
+    </script>
+</head>
+<body>
+
+    <div style="width:auto; height:900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

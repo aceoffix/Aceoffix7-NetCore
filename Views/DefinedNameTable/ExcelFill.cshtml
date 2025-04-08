@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/DefinedNameTable/SaveData";
+            aceoffixctrl.SaveDataPage = saveUrl;
+            aceoffixctrl.SaveDataPage = saveUrl;
+            aceoffixctrl.WebSave();
+            alert(aceoffixctrl.CustomSaveResult);
+        }
+
+        function OnAceoffixCtrlInit() {
+           aceoffixctrl.Caption = "Assign Values to Named Cells in Excel Documents";
+           aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+    </script>
+</head>
+<body>
+    The table data is filled using backend programming. Please refer to the code in ExcelFill.aspx.
+    <div style="width: auto; height: 95vh;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

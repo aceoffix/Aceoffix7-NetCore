@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/SaveDataAndFile/SaveDoc";
+            var saveDataUrl = "/SaveDataAndFile/SaveData";
+           aceoffixctrl.SaveFilePage = saveUrl;
+            aceoffixctrl.SaveDataPage = saveDataUrl;
+            aceoffixctrl.WebSave();
+            // Get the save result and perform the next business logic based on it. The return values of saving data and saving the file are separated by \n.
+            let saveResult = aceoffixctrl.CustomSaveResult;
+            let saveDataResult = saveResult.split("\n")[0];
+            let saveFileResult = saveResult.split("\n")[1];
+            alert("Data save result: " + saveDataResult);
+            alert("File save result: " + saveFileResult);
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div>
+            <span style="color: Red; font-size: 14px;">Please enter the company name:</span><input id="CompanyName" name="CompanyName" type="text" /><br />
+        </div>
+        <div style="width: auto; height: 900px;">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>
+

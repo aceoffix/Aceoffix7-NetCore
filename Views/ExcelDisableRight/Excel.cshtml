@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disable Right-Click in Excel</title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            // Hide the custom toolbar
+            aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div style="color:Red">After opening the Excel document, try right-clicking the mouse. You'll find that the right-click function is disabled.</div>
+        <div style=" width:100%; height:900px;">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

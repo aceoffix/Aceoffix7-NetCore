@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo: Retrieve Selected Text Content</title>
+    <script type="text/javascript">
+        // Function to retrieve the selected text from the Word document.
+        function getSelectionText(){
+            if (aceoffixctrl.word.GetTextFromSelection() != "") {
+                alert(aceoffixctrl.word.GetTextFromSelection());
+            } else {
+                alert("You have not selected any text.");
+            }
+        }
+
+        // Event handler for when the Aceoffix control is initialized.
+        function OnAceoffixCtrlInit() {
+            // Adds a custom toolbar button that triggers the 'getSelectionText' function when clicked.
+           aceoffixctrl.AddCustomToolButton("Retrieve Selected Text Content", "getSelectionText()", 5);
+        }
+    </script>
+</head>
+<body>
+    <title>Demo: Retrieve Selected Text Content</title>
+    <script type="text/javascript">
+        // Function to retrieve the selected text from the Word document.
+        function getSelectionText(){
+            if (aceoffixctrl.word.GetTextFromSelection() != "") {
+                alert(aceoffixctrl.word.GetTextFromSelection());
+            } else {
+                alert("You have not selected any text.");
+            }
+        }
+
+        // Event handler for when the Aceoffix control is initialized.
+        function OnAceoffixCtrlInit() {
+            // Adds a custom toolbar button that triggers the 'getSelectionText' function when clicked.
+           aceoffixctrl.AddCustomToolButton("Retrieve Selected Text Content", "getSelectionText()", 5);
+        }
+    </script>
+    <div style="height: 900px;width:auto">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

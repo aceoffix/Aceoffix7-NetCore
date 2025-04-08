@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+        <title>RevisionOnly</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function Save() {
+            aceoffixctrl.SaveFilePage = "/RevisionOnly/SaveDoc";
+                aceoffixctrl.WebSave();
+            }
+
+            function OnAceoffixCtrlInit() {
+                aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+                aceoffixctrl.AddCustomToolButton("Hide Revisions", "hideRevision()", 0);
+                aceoffixctrl.AddCustomToolButton("Show Revisions", "showRevision()", 0);
+            }
+
+            function showRevision() {
+                aceoffixctrl.ShowRevisions = true;
+            }
+
+            function hideRevision() {
+                aceoffixctrl.ShowRevisions = false;
+            }
+        </script>
+        <div id="main">
+            <div id="content" style="height:850px;width:1036px;overflow:hidden;">
+                @Html.Raw(ViewBag.aceCtrl)
+            </div>
+        </div>
+    </body>
+</html>
+

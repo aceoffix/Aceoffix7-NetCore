@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Switch and Open Different Files by Clicking Hyperlinks</title>
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <style>
+        /* Set the style for the entire page */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .Word {
+            display: flex;
+        }
+
+        .sidebar {
+            flex: 0 0 25%;
+            /* Enable Flex layout */
+            height: 100vh;
+            /* Fill the entire viewport width (or omit, as it's 100% by default) */
+            border-right: 1px solid #ccc;
+            /* padding: 10px 100px */
+            text-align: center;
+            padding: 10px 50px;
+        }
+
+        .file-link {
+            cursor: pointer;
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            text-decoration: underline;
+            color: #3568d7; /* Default link color */
+            display: block; /* Make the link fill the entire li element */
+        }
+
+            .file-link:hover {
+                background-color: #f0f0f0; /* Background color on hover */
+                color: #42b983; /* Text color on hover */
+            }
+
+        .content {
+            flex: 0 0 75%;
+            padding: 10px;
+        }
+
+        h4 {
+            color: #42b983;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var fileName = "test1.docx";// Open test1.docx by default
+        firstLoadFile(fileName);
+        function firstLoadFile(fileName) {
+            $.post("Word", { fileName: fileName }, function (data) {
+                $("#divDocView").html(data);
+            });
+        }
+        function selectFile(file) {
+            selectedFile.value = file;
+            switchFile(file.fileName);
+        }
+        function switchFile(fileName) {
+            $.post("Word", { fileName: fileName }, function (data) {
+                $("#divDocView").html(data);
+                pageofficectrl.Reload(); // Necessary. Must call aceoffixctrl.Reload() when switching open files
+            });
+        }
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.CustomToolbar = false; // Hide the custom toolbar
+        }
+    </script>
+</head>
+<body>
+    <div class="Word">
+        <div class="sidebar">
+            <h3>File List</h3>
+            <ul>
+                <li id="1" onclick="switchFile('test1.docx')" class="file-link">
+                    test1.docx
+                </li>
+                <li id="2" onclick="switchFile('test2.docx')" class="file-link">
+                    test2.docx
+                </li>
+                <li id="3" onclick="switchFile('test3.docx')" class="file-link">
+                    test3.docx
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <h4></h4>
+            <!-- This div is used to load the Aceoffix client control. The height, width, and position of the div determine the size and position of the control -->
+            <div style="width:auto; height:100%;" id="divDocView"></div>
+        </div>
+    </div>
+</body>
+</html>

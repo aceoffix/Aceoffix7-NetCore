@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.Caption = "Simply assign values to Excel";
+            aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+</head>
+<body>
+    <div style="width: auto;height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

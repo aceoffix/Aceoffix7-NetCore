@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <!-- The js must be referenced -->
+    <script type="text/javascript" src="../aceoffix.js"></script>
+    <script type="text/javascript">
+        function OpenFile() {
+            var user = document.getElementById('userName').value;
+            AceBrowser.openWindow('Excel?userName=' + user, 'width=1200px;height=800px;');
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form1" method="post">
+        <div style="text-align: center;">
+            <div>Please select a user to log in:</div><br />
+            <select name="userName" id="userName">
+                <option selected="selected" value="Tom">Tom</option>
+                <option value="Jack">Jack</option>
+            </select><br /><br />
+            <input type="button" onclick="OpenFile();" value="Open File" /><br /><br />
+            <div style="color: red;">Different users can edit different regions in the document after logging in.</div>
+        </div>
+    </form>
+</body>
+
+</html>

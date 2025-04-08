@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title> 
+</head>
+<body>
+    <script type="text/javascript">
+        function SaveDoc() {
+            aceoffixctrl.SaveFilePage = "/FileMakerConvertPDFs/SaveDoc";
+            aceoffixctrl.WebSave();
+        }
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "SaveDoc()", 1);
+        }
+    </script>
+    <div style="width: auto;height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

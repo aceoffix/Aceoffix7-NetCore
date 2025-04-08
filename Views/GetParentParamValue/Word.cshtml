@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pass parameters from the parent page to the child page</title>
+    <script type="text/javascript">
+        function AfterDocumentOpened() {
+            var userName =aceoffixctrl.WindowParams;
+            document.getElementById("userName").value = userName;
+        }
+        function OnAceoffixCtrlInit() {
+            // Hide the custom toolbar
+           aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <font color="red">Parameters passed from the parent page:</font><input type="text" id="userName" name="userName" />
+    </div>
+    <div style="width:auto; height:95vh;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

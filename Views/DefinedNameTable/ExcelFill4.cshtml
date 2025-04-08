@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/DefinedNameTable/SaveData";
+            aceoffixctrl.SaveDataPage = saveUrl;
+            aceoffixctrl.WebSave();
+            alert(aceoffixctrl.CustomSaveResult);
+        }
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+    </script>
+</head>
+<body>
+    Display effect after OpenTable fills in the data
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

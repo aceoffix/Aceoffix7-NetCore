@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert Word File to PDF Format</title>
+    <script type="text/javascript">
+        // Save the file
+        function Save() {
+            aceoffixctrl.SaveFilePage = "/SaveAsPDF/SaveDoc";
+            aceoffixctrl.WebSave();
+        }
+
+        // Save as a PDF file
+        function SaveAsPDF() {
+            aceoffixctrl.SaveFilePage = "/SaveAsPDF/SaveDoc";
+            aceoffixctrl.WebSaveAsPDF();
+            alert("The PDF file has been saved to the 'SaveAsPDF/doc/' directory of the project.");
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save()", 1);
+            aceoffixctrl.AddCustomToolButton("SaveAsPDF", "SaveAsPDF()", 1);
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div style="width: auto; height: 900px;">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Control the Hiding and Showing of the Title Bar, Menu Bar, Custom Toolbar, and Office Toolbar</title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.Titlebar = false; // Hide the title bar
+            aceoffixctrl.CustomToolbar = false; // Hide the custom toolbar
+            aceoffixctrl.OfficeToolbars = false; // Hide the Office toolbar
+        }
+    </script>
+</head>
+<body>
+    This shows the effect of hiding the title bar, custom toolbar, and Office toolbar. Each bar can be individually controlled to be hidden or shown.
+
+    <div style="width: auto;height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

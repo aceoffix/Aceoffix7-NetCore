@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            // Hide the custom toolbar
+            aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+</head>
+<body>
+    <div style="height:850px;width:1036px">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/SaveReturnValue/SaveDoc";
+            aceoffixctrl.SaveFilePage = saveUrl;
+            aceoffixctrl.WebSave();
+            // The value returned by aceoffixctrl.CustomSaveResult is defined by the background code fs.CustomSaveResult = "OK"; in the save page.
+            alert("Saved successfully. The return value is: " + aceoffixctrl.CustomSaveResult);
+        }
+
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.Caption = "Demo: Return value of saving";
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+
+    </script>
+</head>
+<body >
+    <form id="form1" runat="server">
+        <div style=" font-size:small; color:Red;">
+            <asp:Label ID="Label4" runat="server" Text="Key code: Right-click and select 'View source file' to see the js function 'Save()':"></asp:Label>
+            <br />aceoffixctrl.WebSave(); // Perform the save operation
+            <br />aceoffixctrl.CustomSaveResult // Get the return value defined by the background code fs.CustomSaveResult = "OK"; in the save page SaveDoc
+            <br />
+        </div>
+        <div style=" width:auto; height:900px;">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

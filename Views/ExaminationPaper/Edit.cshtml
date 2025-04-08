@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+        function Save() {
+            var myObject = {};
+            myObject.id = aceoffixctrl.WindowParams;
+            var params = new URLSearchParams(myObject);
+            var saveUrl = "/ExaminationPaper/SaveDoc";
+            aceoffixctrl.SaveFilePage = `${saveUrl}?${params.toString()}`;
+            aceoffixctrl.WebSave();
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+    </script>
+</head>
+<body>
+    <div style="width: auto; height: 900px;">       
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

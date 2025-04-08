@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Document Comparison</title>
+    <script language="javascript" type="text/javascript">
+
+        function ShowFile1View() {
+            aceoffixctrl.word.ShowCompareView(1);
+        }
+
+        function ShowFile2View() {
+            aceoffixctrl.word.ShowCompareView(2);
+        }
+
+        function ShowCompareView() {
+            aceoffixctrl.word.ShowCompareView(0);
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Show Document A", "ShowFile1View()", 0);
+            aceoffixctrl.AddCustomToolButton("Show Document B", "ShowFile2View()", 0);
+            aceoffixctrl.AddCustomToolButton("Show Comparison Result", "ShowCompareView()", 0);
+        }
+    </script>
+</head>
+<body>
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

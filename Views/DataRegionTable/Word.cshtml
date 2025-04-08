@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>Submit a Table in a Data Region</title>
+    <link href="images/csstg.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/DataRegionTable/SaveData";
+            aceoffixctrl.SaveDataPage = saveUrl;
+            aceoffixctrl.WebSave();
+            alert(aceoffixctrl.CustomSaveResult);
+        }
+        function IsFullScreen() {
+            aceoffixctrl.FullScreen =
+                !aceoffixctrl.FullScreen;
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+            aceoffixctrl.AddCustomToolButton("Full Screen/Restore", "IsFullScreen", 4);
+        }
+    </script>
+</head>
+<body>
+    <div id="textcontent" style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

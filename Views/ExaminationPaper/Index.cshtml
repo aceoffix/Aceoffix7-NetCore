@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Test Papers Dynamically</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-top: 20px;
+            padding-left: 20%;
+        }
+
+        #form1 {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        table {
+            width: 400px;
+            background-color: #999;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        input[type="button"] {
+            margin-top: 20px;
+        }
+    </style>
+    <!-- The aceoffix.js must be referenced -->
+    <script type="text/javascript" src="../aceoffix.js"></script>
+    <script type="text/javascript">
+        function button2Click() {
+            var ids = "";
+            for (var i = 1; i < 11; i++) {
+                if (document.getElementById("check" + i.toString()).checked) {
+                    ids += i.toString() + ",";
+                }
+            }
+            if (ids == "")
+                alert("Please select the questions you want to generate first.");
+            else
+                location.href = "javascript:AceBrowser.openWindow('Compose2?ids=" + ids.substr(0, ids.length - 1) + "', 'width=1200px;height=800px;');";
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" id="form1" method="post" action="Compose">
+        <div class="container">
+            <p>1. You can click "Edit" in the "Operation" column to edit each question.</p>
+            <p>2. You can select multiple questions and click the "Generate Test Paper" button to generate a test paper.</p>
+            <table style="background-color: #999; width: 600px;">
+                @Html.Raw(ViewBag.strHtmls)
+            </table>
+            <br />
+            <input type="button" onclick="button2Click();" id="Button2" value="Generate a Test Papers" />
+        </div>
+    </form>
+</body>
+</html>

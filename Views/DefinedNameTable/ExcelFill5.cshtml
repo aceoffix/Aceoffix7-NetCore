@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/DefinedNameTable/SaveData";
+            aceoffixctrl.SaveDataPage = saveUrl;
+            aceoffixctrl.WebSave();
+            alert(aceoffixctrl.CustomSaveResult);
+        }
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.Caption = "Assign values to the table with a defined name in the Excel document.";
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+    </script>
+</head>
+<body>
+    The display effect after filling data through the OpenTableByDefinedName method.
+    <div style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+</body>
+</html>

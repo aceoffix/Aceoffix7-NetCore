@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title></title>
+    <link href="images/csstg.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function Save() {
+            var saveUrl = "/SetDrByUserWord/SaveDoc";
+            aceoffixctrl.SaveFilePage = saveUrl;
+            aceoffixctrl.WebSave();
+        }
+
+        function IsFullScreen() {
+            aceoffixctrl.FullScreen =
+                !aceoffixctrl.FullScreen;
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+            aceoffixctrl.AddCustomToolButton("Full Screen/Restore", "IsFullScreen", 4);
+        }
+    </script>
+
+</head>
+<body>
+    <span style="width: 100px;"> </span>
+    <strong>Current User:</strong>
+    <span style="color: Red;">@Html.Raw(ViewBag.user)</span>
+    <div  style="width: auto; height: 900px;">
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+
+</body>
+</html>
+

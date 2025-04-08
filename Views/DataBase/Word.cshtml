@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open a file saved in the DataBase</title>
+
+    <script type="text/javascript">
+        function Save() {
+            aceoffixctrl.SaveFilePage = "/DataBase/SaveDoc?id=1";
+            aceoffixctrl.WebSave();
+        }
+
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div style="width: auto; height: 98vh;">       
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,945 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="gtco-features">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2>5.New Features of Aceoffix V7.0</h2>
+            </div>
+        </div>
+        <div class="row">
+            <table class="zz-talbe">
+                <thead>
+                    <tr>
+                        <th style="width:45px;">Type </th>
+                        <th style="width:500px;">Function Example</th>
+                        <th style="width:120px;">Directory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            5.1 <a href="javascript:AceBrowser.openWindow('DivMessage/Word' , 'width=1055px;height=900px;');">Demonstrate the pop - up of message boxes</a>
+                            <!--| <a href="https://cn/pages/7bb96a/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate the pop - up of message boxes.</p>
+                        </td>
+                        <td>/DivMessage</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            5.2 <a href="javascript:AceBrowser.openWindow('ApplicationForm/Word' , 'width=1055px;height=900px;');">Demonstrate filling out Word tables using a modal dialog box</a>
+                            <!--| <a href="https://cn/pages/e3ed66/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate the effect of filling out tables in a Word document using a popped - up div modal box.</p>
+                        </td>
+                        <td>/ApplicationForm</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            5.3 <a href="javascript:AceBrowser.openWindow('FormToDataRegions/Word' , 'width=1500px;height=900px;');">Dynamically populate the content of a Form into a Word document</a>
+                            <p>Dynamically populate the content of a Form into a Word document.</p>
+                        </td>
+                        <td>/FormToDataRegions</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/pdf.jpg" /></td>
+                        <td>
+                            5.4 <a href="FileMakerToPDF/index" target="_blank">Use FileMaker to convert a single Word document to PDF </a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/3fef19/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate that under Aceoffix 7.0, when using FileMaker to convert Word to PDF, there's no need for a pop - up window. The conversion can be directly completed on the system's main page, accompanied by the real - time conversion progress of the file. Note that this conversion utilizes Word's own conversion function, so there won't be any issues with format and layout in the generated PDF files. To achieve the effect of batch conversion, please refer to the example in (3.15. Batch conversion of Word files to PDF).</p>
+                        </td>
+                        <td>/FileMakerToPDF</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="gtco-features">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading" id="jichu">
+                <h2>1.Basic Features</h2>
+            </div>
+        </div>
+        <div class="row">
+            <table class="zz-talbe">
+                <thead>
+                    <tr>
+                        <th style="width:45px;">Type </th>
+                        <th style="width:500px;">Function Examples</th>
+                        <th style="width:120px;">Directory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.1 <a href="javascript:AceBrowser.openWindow('SimpleWord/Word', 'width=1050px;height=900px;');">The simplest way to open and save Word files online (using URL addresses）</a>
+                            <!--| <a href="https://www.cn/pages/10e6ef/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate how Aceoffix enables the most basic function of opening and saving Word files on the server online. This is also the simplest example of integrating  Users who are new to the Aceoffix product can refer to this example to integrate Aceoffix into their own projects.。</p>
+                        </td>
+                        <td>/SimpleWord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.2 <a href="javascript:AceBrowser.openWindow('SimpleWord/Word1', 'fullscreen=yes;');">Open Office files using disk paths (taking Word files as an example)</a>
+                            <!--| <a href="https://www.cn/pages/2ef079/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>
+                                The simplest example of integrating Aceoffix, but it uses the server disk path method. The advantages of this method are as follows: 1. It supports non - English paths. 2. Files can be saved in any disk folder on the server.
+                                <span style="color:red;">(This example demonstrates opening a file in fullscreen window mode.)</span>
+                            </p>
+                        </td>
+
+                        <td>/SimpleWord</td>
+                    </tr>
+
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            1.3 <a href="javascript:AceBrowser.openWindow('SimpleExcel/Excel' , 'width=1200px;height=900px;');">The simplest way to open and save Excel files online</a>
+                            <!--| <a href="https://www.cn/pages/4cb61d/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>
+                                Demonstrate the effect of opening and saving Excel files online. The code is almost exactly the same as that for opening and saving Word files above, except for the second parameter of the WebOpen method. The second parameter of the WebOpen method needs to be consistent with the file format of the actual Office document to be opened.
+                            </p>
+                        </td>
+                        <td>/SimpleExcel</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-3.png" /></td>
+                        <td>
+                            1.4 <a href="javascript:AceBrowser.openWindow('SimplePPT/PPT' , 'width=1200px;height=900px;');">The simplest way to open and save PowerPoint files online</a>
+                            <!--| <a href="https://www.cn/pages/ac6ec7/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>
+                                Demonstrate the effect of opening and saving PowerPoint files online. The code is almost exactly the same as that for opening and saving Word files above, except for the second parameter of the WebOpen method. The second parameter of the WebOpen method needs to be consistent with the file format of the actual Office document to be opened.
+                            </p>
+                        </td>
+                        <td>/SimplePPT</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.5 <a href="javascript:AceBrowser.openWindow('TitleText/Word', 'width=1200px;height=900px;');">Modify Title Bar Text Content</a>
+                            <!--| <a href="https://www.cn/pages/7c934d/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>The text content of the title bar can be modified by assigning a value to the Caption property. If no value is assigned to Caption, the default text displayed in the title bar is:"Aceoffix". </p>
+                        </td>
+                        <td>/TitleText</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.6 <a href="javascript:AceBrowser.openWindow('ControlBars/Word', 'width=1200px;height=900px;');">Hide Title Bar, Custom Toolbars, and Office Toolbars (Word as an Example)</a>
+                            <!--| <a href="https://www.cn/pages/d24428/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates how to hide the title bar, custom toolbars, and Office toolbars. Each bar can be individually controlled for hiding.</p>
+                        </td>
+                        <td>/ControlBars</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.7 <a href="javascript:AceBrowser.openWindow('OpenWord/Word', 'width=1200px;height=900px;');">The Simplest Way to Open Office Files in Read - Only Mode (Take Word as an Example)</a>
+                            <!--| <a href="https://www.cn/pages/3e8ea9/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>To open an Office file in read - only mode, you only need to modify the second parameter of WebOpen. Aceoffix provides docReadOnly, xlsReadOnly, and pptReadOnly modes for Word, Excel, and PPT respectively.</p>
+                        </td>
+                        <td>/OpenWord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.9 <a href="javascript:AceBrowser.openWindow('SaveReturnValue/Word', 'width=1200px;height=900px;');">Return a Developer - defined Save Result Value to the Front - end Page after Document Saving (Take Word as an Example)</a>
+                            <!--| <a href="https://www.cn/pages/e479cf/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Set the FileSaver.CustomSaveResult property through the background code to return a user - defined value to the Aceoffix object on the front - end page. This meets the needs of some developers to return an ID or other save results to the front - end page.</p>
+                        </td>
+                        <td>/SaveReturnValue</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.10 <a href="javascript:AceBrowser.openWindow('SendParameters/Word', 'width=1200px;height=900px;');">Pass Parameters to the Save Page (the Page Pointed to by the SaveFilePage Property)</a>
+                            <!--| <a href="https://www.cn/pages/ce2a44/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates three ways for Aceoffix to pass parameters to the save page: (1) Pass parameters through the '?' in the URL of the save page; (2) Pass parameters to the save page through an input hidden field; (3) Pass parameters to the save page through Form controls (Form controls here include input boxes, dropdown boxes, radio boxes, checkboxes, TextArea and other types of controls).</p>
+                        </td>
+                        <td>/SendParameters</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.11 <a href="javascript:AceBrowser.openWindow('DataRegionFill/Word', 'width=1200px;height=900px;');">A Simple Example of Assigning Values to Data Regions in a Word Document</a>
+                            <!--| <a href="https://www.cn/pages/342350/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example is the simplest one for assigning values to data regions in a Word document. Manually set some DataRegions in the Word document in advance. Aceoffix can be used to dynamically fill content at the marked positions in the document.</p>
+                        </td>
+                        <td>/DataRegionFill</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            1.12 <a href="javascript:AceBrowser.openWindow('ExcelFill/Excel', 'width=1200px;height=900px;');">A Simple Example of Assigning Values to an Excel Table</a>
+                            <!--| <a href="https://www.cn/pages/76840d/" target="_blank" style="color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example is the simplest one for assigning values to Excel cells.</p>
+                        </td>
+                        <td>/ExcelFill</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.13<a href="javascript:AceBrowser.openWindow('SubmitWord/Word' , 'width=1200px;height=900px;');">The simplest way to submit user input in a Word document</a>
+                            <!--| <a href="https://www.cn/pages/10bd42/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates the effect of using the WordReader object in Aceoffix to obtain data from a Word document. This example only shows the most basic functionality. For more detailed features, please refer to the "Comprehensive Demo" example.</p>
+                        </td>
+                        <td>/SubmitWord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            1.14<a href="javascript:AceBrowser.openWindow('SubmitExcel/Excel' , 'width=1200px;height=900px;');">The simplest way to submit user input in an Excel document</a>
+                            <!--|<a href="https://www.cn/pages/541f37/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates the effect of using the ExcelReader object in Aceoffix to obtain cell data from an Excel document. This example only shows the most basic functionality. For more detailed features, please refer to the "Comprehensive Demo" example.</p>
+                        </td>
+                        <td>/SubmitExcel</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.16<a href="javascript:AceBrowser.openWindow('CommandCtrl/Word','width=1200px;height=900px;');">Control the save, save - as, and print functions (taking Word as an example)</a>
+                            <p>Demonstrates how to disable the save, save - as, and print functions in Office respectively.</p>
+                        </td>
+                        <td>/CommandCtrl</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.17 <a href="javascript:AceBrowser.openWindow('WordSetTable/Word' , 'width=1200px;height=900px;');">A simple example of assigning values to a table in a Word document</a>
+                            <!--| <a href="https://www.cn/pages/9fa856/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates the operations of Aceoffix on a table in a Word document, including assigning values to cells and dynamically adding rows.</p>
+                        </td>
+                        <td>/WordSetTable</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.18 <a href="javascript:AceBrowser.openWindow('WordDataTag2/Word' , 'width=1200px;height=900px;');">Use data tags (DataTag) to fill text data into a Word file</a>
+                            <!--| <a href="https://www.cn/pages/4b6ab0/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Assign values to data tags (DataTag) in a Word template. For the requirement of having the same data in multiple positions in the template, data tags can be used to mark multiple positions that need to be filled with the same data, and then program the data tags to fill the template and generate a file.</p>
+                        </td>
+                        <td>/WordDataTag2</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.19 <a href="javascript:AceBrowser.openWindow('CustomToolButton/Word' , 'width=1200px;height=900px;');">Add a button to the Aceoffix custom toolbar (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/e6520b/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Add a button to the Aceoffix custom toolbar and set the code to be executed when clicked.</p>
+                        </td>
+                        <td>/CustomToolButton</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.20 <a href="javascript:AceBrowser.openWindow('AfterDocOpened/Word' , 'width=1200px;height=900px;');">Add an event triggered on the page after the document is opened (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/2f4088/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This demo shows how to add a JavaScript event triggered by AceoffixCtrl in the page after opening the document. This event is quite commonly used. You can execute your code in this event after opening the document.</p>
+                        </td>
+                        <td>/AfterDocOpened</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.21 <a href="javascript:AceBrowser.openWindow('JsControlBars/Word' , 'width=1200px;height=900px;');">Use JS to control the hiding and showing of each toolbar on the Aceoffix window (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/8562bf/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate how to use JS to control the hiding and showing of the title bar, custom toolbar, and Office toolbar.</p>
+                        </td>
+                        <td>/JsControlBars</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            1.23 <a href="javascript:AceBrowser.openWindow('ExcelTable/Excel' , 'width=1200px;height=900px;');">Assign values to a range in Excel and automatically add rows</a>
+                            <!--| <a href="https://www.cn/pages/135d32/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate the OpenTable method of Aceoffix to achieve row growth and also reuse the cell styles of the original template Table area (B4:F13) in a loop.</p>
+                        </td>
+                        <td>/ExcelTable</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.24 <a href="javascript:AceBrowser.openWindow('SaveAsHTML/Word' , 'width=1200px;height=900px;');">Save the file as HTML format (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/51bfaf/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate the use of Aceoffix's WebSaveAsHTML method to save the file as HTML format on the server.</p>
+                        </td>
+                        <td>/SaveAsHTML</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.26 <a href="javascript:AceBrowser.openWindow('BeforeAndAfterSave/Word' , 'width=1200px;height=900px;');">Code to be executed before and after document saving (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/a999ba/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate how to execute your own business logic code before and after document saving.</p>
+                        </td>
+                        <td>/BeforeAndAfterSave</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.28 <a href="javascript:AceBrowser.openWindow('SaveDataAndFile/Word' , 'width=1200px;height=900px;');">Save both the data at a specified position in the Word document and the entire document (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/5925ba/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate how to combine the setSaveDataPage and setSaveFilePage methods to achieve the effect of saving both data and file simultaneously.</p>
+                        </td>
+                        <td>/SaveDataAndFile</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.31 <a href="javascript:AceBrowser.openWindow('WordDisableRight/Word' , 'width=1200px;height=900px;');">Disable the right - click menu in Word</a>
+                            <!--| <a href="https://www.cn/pages/207305/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate how to use the server - side method setDisableWindowRightClick(true) to disable the right - click menu in the current Word document.</p>
+                        </td>
+                        <td>/WordDisableRight</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            1.32 <a href="javascript:AceBrowser.openWindow('ExcelDisableRight/Excel' , 'width=1200px;height=900px;');">Disable the right - click menu in Excel</a>
+                            <!--| <a href="https://www.cn/pages/1551e0/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate how to use the server - side method setDisableSheetRightClick(true) to disable the right - click menu in the current Excel worksheet.</p>
+                        </td>
+                        <td>/ExcelDisableRight</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.35 <a href="javascript:AceBrowser.openWindow('RevisionOnly/Word', 'width=1050px;height=900px;');">Demonstrate editing a Word document in forced revision tracking mode</a>
+                            <!--| <a href="https://www.cn/pages/0605b8/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate using the second parameter 'docRevisionOnly' and the third parameter (username) in the WebOpen method to open and edit a Word document online in forced revision tracking mode.</p>
+                        </td>
+                        <td>/RevisionOnly</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.36 <a href="javascript:AceBrowser.openWindow('CommentOnly/Word',  'width=1150px;height=900px;');">Insert keyboard comments into a read - only Word document</a>
+                            <p>Demonstrate using the second parameter 'docCommentOnly' and the third parameter (username) in the WebOpen method to insert keyboard comments into a read - only Word document.</p>
+                        </td>
+                        <td>/CommentOnly</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.37 <a href="CallParentFunction/index.html" target="_blank">The page opened byAceBrowser (child page) calls back a function of the parent page to pass values (taking Word as an example)</a>
+                            <p>The page opened byAceBrowser (child page) calls back a JavaScript function of the parent page. This function can also automatically update the partial status information of the parent page after the child page is closed.</p>
+                        </td>
+                        <td>/CallParentFunction</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.38 <a href="javascript:AceBrowser.openWindow('GetParentParamValue/Word' , 'width=1200px;height=900px;','Jones');">The parent page passes parameters to the page opened by AceBrowser (child page)</a>
+                            <p>Use the third parameter of the openWindow method to pass parameters to the page opened byAceBrowser. (Note: If you are passing short parameters, you can directly use the '?parameterName=' method. If the parameter bytes exceed 1000b, you can only use the 'third parameter of openWindow' method.)</p>
+                        </td>
+                        <td>/GetParentParamValue</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            1.39 <a href="javascript:AceBrowser.openWindow('SwitchFile/index.html', 'width=1200px;height=900px;');">Switch between different files opened in the AceBrowser window</a>
+                            <p>Demonstrate the effect of switching between different files opened by clicking hyperlinks in the AceBrowser window.</p>
+                        </td>
+                        <td>/SwitchFile</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="gtco-portfolio" class="gtco-section">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading" id="gaoji">
+                <h2>2.ADVANCED FEATURES</h2>
+            </div>
+        </div>
+
+        <div class="row row-pb-md" id="div_gaoji">
+            <table class="zz-talbe">
+                <thead>
+                    <tr>
+                        <th style="width:45px;">Type </th>
+                        <th style="width:500px;">Function Examples</th>
+                        <th style="width:120px;">Directory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.1 <a href="javascript:AceBrowser.openWindow('ReadOnly/Word' , 'width=1200px;height=900px;');">Online secure browsing of files (taking Word as an example)</a>
+                            <!--| <a href="https://www.cn/pages/f45d11/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>
+                                Open a Word file online in read-only mode, prohibiting editing, copying, printing, and saving as. <br />
+                                Secure document browsing prohibits operations such as editing, copying, pasting, right-click menus, selection, downloading, saving as, downloading via F12, and screen capture using PrintScreen.
+                            </p>
+                        </td>
+                        <td>/ReadOnly</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.2 <a href="javascript:AceBrowser.openWindow('DataBase/Word' , 'width=1200px;height=900px;');">Open and save files in the database (taking Word as an example)</a>
+                            <p>Demonstrate how to use Aceoffix to open files saved in the database in a streaming manner. It is not recommended to save files in the database as it is not convenient for debugging and affects the database query speed.</p>
+                        </td>
+                        <td>/DataBase</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/pdf.jpg" /></td>
+                        <td>
+                            2.5 <a href="javascript:AceBrowser.openWindow('SaveAsPDF/WordToPDF' , 'width=1200px;height=900px;');">Convert Office files to PDF files (taking Word as an example)</a><span style=" color:Red;"> (Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/91f993/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrate the effect of opening a Word file and saving it as a PDF format on the server.</p>
+                        </td>
+                        <td>/SaveAsPDF</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.6 <a href="javascript:AceBrowser.openWindow('WordResWord/Word' , 'width=1200px;height=900px;');">Insert Word Files into Data Regions via Backend Programming</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/d363f7/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how, through backend programming, multiple Word files are inserted into the specified positions of a template when the file is opened, resulting in the effect of generating a merged document.</p>
+                        </td>
+                        <td>/WordResWord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.7 <a href="javascript:AceBrowser.openWindow('WordResImage/Word' , 'width=1200px;height=900px;');">Insert Images into Data Regions via Backend Programming</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/e9c346/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example is a modification based on Example 9, achieving the effect of inserting a mixture of images and Word files into the specified positions of a template to generate a merged document.</p>
+                        </td>
+                        <td>/WordResImage</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.8 <a href="javascript:AceBrowser.openWindow('WordResExcel/Word' , 'width=1200px;height=900px;');">Insert Excel Files into Data Regions via Backend Programming</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/2fa382/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <span style=" color:Red;">(This function is under development for the domestic version.)</span>
+                            <p>This example is a modification based on the previous example, achieving the effect of inserting a mixture of Word and Excel files into the specified positions of a template to generate a merged document.</p>
+                        </td>
+                        <td>/WordResExcel</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.9 <a href="javascript:AceBrowser.openWindow('AddWaterMark/AddWaterMark' , 'width=1200px;height=900px;');">Add Watermarks to Word Documents</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/fb5a6d/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Add watermarks to Word documents by setting the WaterMark property.</p>
+                        </td>
+                        <td>/AddWaterMark</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.10 <a href="javascript:AceBrowser.openWindow('WordDataTag/Word' , 'width=1200px;height=900px;');">Fill Word Files with Formatted Data Using Data Tags (DataTag)</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/5c76a0/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Assign values to the data tags (DataTag) in the Word template. For the requirement of having the same data in multiple positions in the template, data tags can be used to repeatedly mark multiple positions that need to be filled with the same data, and then program the data tags to fill the template and generate a file.</p>
+                        </td>
+                        <td>/WordDataTag</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.11 <a href="javascript:AceBrowser.openWindow('DataRegionCreate/Word' , 'width=1200px;height=900px;');">Dynamically Create Data Regions in Word</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/b5c485/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates the function of dynamically adding data regions using the CreateDataRegion method. Dynamically adding data regions provides more flexibility when generating Word files. You can even create a rich - media Word file from a blank one (see the "Advanced Features" example for details).</p>
+                        </td>
+                        <td>/DataRegionCreate</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.13 <a href="FileMakerSingle/index" target="_blank">FileMaker Convert a Single Document (Taking Word as an Example)</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/f1fa68/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates the effect of dynamically generating a file using the FileMaker object. Although the file is still generated on the client - side and then saved to the server, it is not explicitly opened on the client.</p>
+                        </td>
+                        <td>/FileMakerSingle</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.14 <a href="javascript:AceBrowser.openWindow('WordTable/Word' , 'width=1200px;height=900px;');">Insert New Rows into a Table in a Word Document and Assign Values</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/9fa856/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates the function of Aceoffix to insert new rows into a table in a Word document. It also shows how to add new rows to a table with vertically merged cells.</p>
+                        </td>
+                        <td>/WordTable</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.16 <a href="javascript:AceBrowser.openWindow('DataRegionTable/Word' , 'width=1200px;height=900px;');">Retrieve Table Data from a Word File</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/f010ca/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to retrieve data from a table in a Word document. The prerequisite for retrieving table data is that the table must be within a data region. You can use the OpenTable method of the data region object to obtain the data in each cell of the table.</p>
+                        </td>
+                        <td>/DataRegionTable</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.17 <a href="javascript:AceBrowser.openWindow('DataRegionText/Word' , 'width=1200px;height=900px;');">Control the Style of Text in a DataRegion</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/cbf70a/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use a program to control the style of text in a data region, including setting the font, font size, color, and alignment of the text.</p>
+                        </td>
+                        <td>/DataRegionText</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.18 <a href="SetDrByUserWord/index" target="_blank">Control Different Users to Edit Different Regions in a Word Document</a><span style=" color:Red;"></span>
+                            <!--| <a href="https://www.cn/pages/e715c7/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use a program to control different users so that they can only edit their own regions in a Word document after opening the file.</p>
+                        </td>
+                        <td>/SetDrByUserWord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.19 <a href="SetDrByUserWord2/index" target="_blank">Control Different Users to Edit Different Regions in a Word Document (Allowing Simultaneous Editing)</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/13e46a/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use a program to control different users so that they can only edit their own regions in a Word document after opening the file. With this method, multiple users can open a file simultaneously and edit their respective regions without interfering with each other.</p>
+                        </td>
+                        <td>/SetDrByUserWord2</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.21 <a href="javascript:AceBrowser.openWindow('MergeWordCell/Word' , 'width=1200px;height=900px;');">Merge Cells in a Table of a Word File and Assign Values Using a Program</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/3e6150/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates using the MergeTo method to merge specified cells in a table of a Word file, fill in text data, and set the font, style, and alignment of the text.</p>
+                        </td>
+                        <td>/MergeWordCell</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.23 <a href="javascript:AceBrowser.openWindow('MergeExcelCell/Excel' , 'width=1200px;height=900px;');">Merge Excel Cells, Set Format, and Assign Values Using a Program</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>This example demonstrates using a program to merge specified Excel cells, set the text format, and assign values.</p>
+                        </td>
+                        <td>/MergeExcelCell</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.24 <a href="SetXlsTableByUser/index" target="_blank">Control Different Users to Edit Different Regions in an Excel Document</a><span style=" color:Red;">(Pr(Enterprise Edition, Ultimate Edition)ofessional Edition, Enterprise Edition)</span>
+                            <p>This example demonstrates how to use a program to control different users so that they can only edit their own regions in an Excel document after opening the file.</p>
+                        </td>
+                        <td>/SetXlsTableByUser</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.25 <a href="javascript:AceBrowser.openWindow('SetExcelCellBorder/Excel' , 'width=1200px;height=900px;');">"Draw" Excel Table Lines Using a Program</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/be9f24/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to program the ExcelWriter object to set the border style of each cell or region in an Excel document, that is, to set the style of the Excel table lines.</p>
+                        </td>
+                        <td>/SetExcelCellBorder</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.26 <a href="javascript:AceBrowser.openWindow('SetExcelCellText/Excel' , 'width=1200px;height=900px;');">Set the Font, Color, Alignment, and Background Color of Excel Cell Text Using a Program</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/41f1d6/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to program the ExcelWriter object to set the font and color of the text in each Excel cell, as well as the alignment and background color of the cells.</p>
+                        </td>
+                        <td>/SetExcelCellText</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.27 <a href="javascript:AceBrowser.openWindow('DataRegionFill2/Word' , 'width=1200px;height=900px;');">Assign Values to and Set Styles for Data Regions (DataRegion) in a Word Document</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/3bc297/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This is the simplest example of assigning values to Word data regions. Manually set some DataRegions in a Word document in advance. With Aceoffix, you can dynamically fill content at the marked positions in the document and set the text styles.</p>
+                        </td>
+                        <td>/DataRegionFill2</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.29 <a href="javascript:AceBrowser.openWindow('ExcelFill2/Excel' , 'width=1200px;height=900px;');">Simply Assign Values to Excel Cells and Set Text Color</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/04cd55/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates using a program to fill data into Excel cells and set the text color.</p>
+                        </td>
+                        <td>/ExcelFill2</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.30 <a href="javascript:AceBrowser.openWindow('DataRegionEdit/Word' , 'width=1200px;height=900px;');">The location of the data area (DataRegion) in the user - defined template</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>This demonstrates the use of the data area management window encapsulated by Aceoffix to achieve the effect of allowing users to edit templates on their own and define the positions of various data areas in the templates.</p>
+                        </td>
+                        <td>/DataRegionEdit</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.31 <a href="javascript:AceBrowser.openWindow('DataTagEdit/Word' , 'width=1200px;height=900px;');">Allow Users to Customize the Positions of Data Tags (DataTag) in a Template</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>This example demonstrates using the pre - packaged data tag management window in Aceoffix to allow users to edit the template themselves and define the positions of each data tag in the template.</p>
+                        </td>
+                        <td>/DataTagEdit</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.32 <a href="javascript:AceBrowser.openWindow('DefinedNameCell/Excel' , 'width=1200px;height=900px;');">Assign Values to Cells with Defined Names in an Excel Template</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/a98c69/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <span style=" color:Red;">(This function for the domestic version is under development.)</span>
+                            <p>Excel has a "Define Name" function that allows you to define a name for any cell. For example, you can define the name of a cell as "testA1". This example demonstrates how to assign a value to the cell named "testA1".</p>
+                        </td>
+                        <td>/DefinedNameCell</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.33 <a href="DefinedNameTable/index" target="_blank">Assign Values to a Region with a Defined Name in an Excel Template</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/1c1dab/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Excel has a "Define Name" function that allows you to define a name for a selected region (in the concept of Aceoffix, this region is called a Table). For example, you can define the name of the region "B4:F13" as "report". This example demonstrates how to assign a value to the Table named "report".</p>
+                        </td>
+                        <td>/DefinedNameTable</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/pdf.jpg" /></td>
+                        <td>
+                            2.34 <a href="FileMakerPDF/index" target="_blank">FileMaker Convert a Single Document to PDF (Taking Word as an Example)</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/3fef19/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates using the FileMaker object to dynamically generate a PDF file. Although the PDF file is still generated on the client - side and then saved to the server, it is not explicitly opened on the client.</p>
+                        </td>
+                        <td>/FileMakerPDF</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.35 <a href="javascript:AceBrowser.openWindow('WordCompare/Word' , 'width=1200px;height=900px;');">Demonstrate the Function of Comparing Two Versions of a Word Document</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/bf237a/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Use Aceoffix to open two versions of a Word document online simultaneously. You can switch to display one of the documents or display both documents at the same time to compare the document content, realizing the online document content comparison function.</p>
+                        </td>
+                        <td>/WordCompare</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.36 <a href="javascript:AceBrowser.openWindow('WordTextBox/Word' , 'width=1200px;height=900px;');">Assign Values to Data Regions in Word Text Boxes</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/f9ceb4/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Assign values to data regions within text boxes in a Word document to achieve the effect of filling data into specific positions in the Word file.</p>
+                        </td>
+                        <td>/WordTextBox</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.39 <a href="javascript:AceBrowser.openWindow('SplitWord/Word' , 'width=1200px;height=900px;');">Split a Word Document: Save the Content in Data Regions as Sub - documents</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/febad3/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>When saving the file, extract the content from data regions with the property SubmitAsFile = true in the Word document and save it as a sub - file.</p>
+                        </td>
+                        <td>/SplitWord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.40 <a href="javascript:AceBrowser.openWindow('CommentsList/Word' , 'width=1300px;height=900px;');">Two Ways to Create New Annotations and the Effect of the Annotation List in Word</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>
+                                This example demonstrates the effect of displaying all keyboard annotations in the current document in a list form and creating new keyboard annotations.
+                            </p>
+                        </td>
+                        <td>/CommentsList</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.41 <a href="javascript:AceBrowser.openWindow('RevisionsList/Word' , 'width=1200px;height=900px;');">Display the Revision List in Word</a>
+                            <!--| <a href="https://www.cn/pages/a124a0/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates the effect of displaying all revisions in the current document in a list form and navigating to the page where a revision is located by clicking on the revision in the list.</p>
+                        </td>
+                        <td>/RevisionsList</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.43 <a href="javascript:AceBrowser.openWindow('WordCreateTable/Word' , 'width=1200px;height=900px;');">Dynamically Create Tables and Assign Values in a Word Document</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/f05a73/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to dynamically create multiple tables and assign values in a Word document.</p>
+                        </td>
+                        <td>/WordCreateTable</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.46 <a href="javascript:AceBrowser.openWindow('SaveFirstPageAsImg/Word' , 'width=1200px;height=900px;');">Save the First Page of a Word Document as an Image</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <p>This example demonstrates how to use JavaScript to call the WebSaveAsimg() method to save the first page of a Word document as an image.</p>
+                        </td>
+                        <td>/SaveFirstPageAsImg</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.47 <a href="javascript:AceBrowser.openWindow('ExcelAdjustRC/Excel' , 'width=1200px;height=900px;');">Adjust Rows and Columns in Excel Read - only Mode</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/f9d262/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to allow users to manually adjust the row height and column width of an Excel table in read - only mode.</p>
+                        </td>
+                        <td>/ExcelAdjustRC</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.48 <a href="javascript:AceBrowser.openWindow('WordDeleteRow/Word' , 'width=1200px;height=900px;');">Delete the Row Containing the Specified Cell in a Word Table</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/fb2976/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use the server - side method removeRowAt(cell) to delete the row containing the specified cell in a Word table.</p>
+                        </td>
+                        <td>/WordDeleteRow</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.49 <a href="javascript:AceBrowser.openWindow('InsertPageBreak2/Word' , 'width=1200px;height=900px;');">Insert Page Breaks in Word Using Server - side Methods</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/33ec79/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use the server - side method wordDocument.insertPageBreak() to insert page breaks, ensuring that the formatting of each document remains unchanged when multiple documents are merged.</p>
+                        </td>
+                        <td>/InsertPageBreak2</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            2.50 <a href="javascript:AceBrowser.openWindow('ExcelInsertImage/Excel' , 'width=1200px;height=900px;');">Insert an Image into an Excel Cell</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/2e0aa5/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <span style=" color:Red;">(This function for the domestic version is under development.)</span>
+                            <p>This example demonstrates how to insert an image into a specified Excel cell. The main method used is: cell.setValue("[image]/ExcelInsertImage/image/logo.jpg[/image]").</p>
+                        </td>
+                        <td>/ExcelInsertImage</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.51 <a href="javascript:AceBrowser.openWindow('WordTableSetImg/Word' , 'width=1200px;height=900px;');">Insert an Image into a Cell in a Word Table</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/861af4/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates using cell.setValue("[image]/WordTableSetImg/doc/wang.gif[/image]") to fill a cell in a Word table with an image.</p>
+                        </td>
+                        <td>/WordTableSetImg</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.52 <a href="javascript:AceBrowser.openWindow('WordTableBorder/Word' , 'width=1200px;height=900px;');">Set the Style of a Word Table</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/3c2941/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use the Border class and Font class to set the border style and font style of a Word table.</p>
+                        </td>
+                        <td>/WordTableBorder</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.53 <a href="javascript:AceBrowser.openWindow('ExtractImage/Word' , 'width=1200px;height=900px;');">Extract Images from a Word Document</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/bb23ae/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates how to use the Shape class to obtain images from a Word document.</p>
+                        </td>
+                        <td>/ExtractImage</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.55 <a href="javascript:AceBrowser.openWindow('DisableCopyOut/Word','width=1055px;height=900px;');">Prohibit Copying Content from an Online - Edited Word Document to the Outside</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/addd58/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates the special effect of prohibiting the copying of content from an online Word document to the outside while allowing the copying of external content into the online Word file when opening a Word document online in edit mode.</p>
+                        </td>
+                        <td>/DisableCopyOut</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.56 <a href="javascript:AceBrowser.openWindow('InsertImageSetSize/Word' , 'width=1055px;height=900px;');">Dynamically Insert an Image into a Word Data Region and Set the Image Size via Backend Programming</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/6559a1/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates using backend programming to dynamically insert an image into a Word data region and set the image size.</p>
+                        </td>
+                        <td>/InsertImageSetSize</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            2.57 <a href="FileMakerModify/index" target="_blank">FileMaker Modify the Content of a Specified Region in a Document</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://cn/pages/062231/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>This example demonstrates that FileMaker can directly modify the content of a specified region in a document without opening the file and automatically upload it to the server. The document interface will not be displayed during the whole process.</p>
+                        </td>
+                        <td>/FileMakerModify</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="gtco-counter" class="gtco-section">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading" id="zonghe">
+                <h2>3. Comprehensive Demonstrations</h2>
+            </div>
+        </div>
+        <div class="row">
+            <table class="zz-talbe">
+                <thead>
+                    <tr>
+                        <th style="width:47px;">Type </th>
+                        <th style="width:500px;">Function Example</th>
+                        <th style="width:120px;">Folder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.1 <a href="FileMaker/index" target="_blank">FileMaker Batch Conversion of Documents (Example with Word)</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/a6432a/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates the effect of dynamically generating multiple Word files.</p>
+                        </td>
+                        <td>/FileMaker</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.2 <a href="ExaminationPaper/index" target="_blank">Dynamically Generate an Exam Paper in a Word Document</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>Demonstrates the effect of selecting questions from a question bank and dynamically generating an exam paper. </p>
+                        </td>
+                        <td>/ExaminationPaper</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.7 <a href="javascript:AceBrowser.openWindow('WordParagraph/Word' , 'width=1200px;height=900px;');">Fully Programmed Dynamic Generation of Word Files</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/84974e/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates the use of classes provided in the WordWriter namespace to programmatically generate a richly formatted Word document with images and text from a blank Word file.</p>
+                        </td>
+                        <td>/WordParagraph</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-2.png" /></td>
+                        <td>
+                            3.8 <a href="javascript:AceBrowser.openWindow('DrawExcel/Excel' , 'width=1200px;height=900px;');">Fully Programmed Dynamic Generation of Excel Files</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/21b8e7/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates the use of classes provided in the Excel namespace to programmatically create an Excel file with complex formulas, table lines, text colors, and perfectly formatted cells filled with data from a blank Excel file.</p>
+                        </td>
+                        <td>/DrawExcel</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.10 <a href="WordSalaryBill/index" target="_blank">Dynamic Generation of Pay Slips Using Word Table Templates</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>Demonstrates inserting Word files, filling Word table data, merging Word files, and looping table insertions.</p>
+                        </td>
+                        <td>/WordSalaryBill</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.13 <a href="FileMakerPrintFiles/index">Batch Printing of Files Using FileMaker (Example with Word)</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>Demonstrates the effect of batch printing Word files.</p>
+                        </td>
+                        <td>/FileMakerPrintFiles</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.14 <a href="SaveAndSearch/index" target="_blank">Full-text Search for Word Documents Containing Keywords</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <p>Demonstrates how to perform a full-text search for Word documents containing keywords and highlight the keywords when the document is opened.</p>
+                        </td>
+                        <td>/SaveAndSearch</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.15 <a href="FileMakerConvertPDFs/index" target="_blank">Batch Conversion of Word Files to PDF</a><span style=" color:Red;">(Enterprise Edition, Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/dc59f2/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates how to use the FileMakerCtrl component to batch convert Word files into PDF files.</p>
+                        </td>
+                        <td>/FileMakerConvertPDFs</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            3.16 <a href="ConcurrencyCtrl/Default" target="_blank">Opening Documents with "Concurrency Control" (Example with Word)</a>
+                            <!--<a href="https://www.cn/pages/9a2c4f/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates server-side locking of documents so that only the locked user can open the document for editing, preventing other users from opening or editing the document simultaneously, thus avoiding file overwrite issues.</p>
+                        </td>
+                        <td>/ConcurrencyCtrl</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<div id="gtco-products">
+    <div class="gtco-container">
+        <div class="">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading" id="qita">
+                <h2>4. Other Techniques</h2>
+            </div>
+        </div>
+        <div class="row">
+            <table class="zz-talbe">
+                <thead>
+                    <tr>
+                        <th style="width:37px;">Type </th>
+                        <th style="width:500px;">Function Example</th>
+                        <th style="width:120px;">Folder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            4.1 <a href="javascript:AceBrowser.openWindow('WordAddBKMK/Word' , 'width=1200px;height=900px;');">Insert Bookmark at Current Cursor in Word</a>
+                            <p>Demonstrates the use of JavaScript to insert a bookmark into a document.</p>
+                        </td>
+                        <td>/WordAddBKMK</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            4.2 <a href="javascript:AceBrowser.openWindow('WordLocateBKMK/Word' , 'width=1200px;height=900px;');">JavaScript Locate Cursor to Bookmark</a>
+                            <!--| <a href="https://www.cn/pages/a12f19/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates using JavaScript to locate the cursor to the position of a bookmark, which can be used to achieve the effect of automatically stamping at a specified location.</p>
+                        </td>
+                        <td>/WordLocateBKMK</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            4.3 <a href="javascript:AceBrowser.openWindow('WordGetSelection/Word' , 'width=1200px;height=900px;');">JavaScript Get Selected Text in Word</a>
+                            <!--| <a href="https://www.cn/pages/fdfb0e/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates using JavaScript to retrieve the currently selected text content in the document.</p>
+                        </td>
+                        <td>/WordGetSelection</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            4.4 <a href="javascript:AceBrowser.openWindow('InsertImgForJs/Word' , 'width=1200px;height=900px;');">Insert Image Using JavaScript (Example with Word)</a>
+                            <p>Demonstrates inserting an image into a document at a specified location using JavaScript.</p>
+                        </td>
+                        <td>/InsertImgForJs</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/office-1.png" /></td>
+                        <td>
+                            4.5 <a href="javascript:AceBrowser.openWindow('JsInsertWaterMark/Word' , 'width=1200px;height=900px;');">Insert Watermark in Word Document Using JavaScript</a><span style=" color:Red;">(Ultimate Edition)</span>
+                            <!--| <a href="https://www.cn/pages/d89c6f/" target="_blank" style=" color: rgb(28, 200, 28);">Detailed Code Explanation</a>-->
+                            <p>Demonstrates inserting a watermark into a Word document using JavaScript.</p>
+                        </td>
+                        <td>/JsInsertWaterMark</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

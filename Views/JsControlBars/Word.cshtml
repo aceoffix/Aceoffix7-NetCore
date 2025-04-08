@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body >
+    <script type="text/javascript">
+
+        // Hide/Show the title bar
+        function Button1_onclick() {
+            var bVisible = aceoffixctrl.Titlebar;
+            aceoffixctrl.Titlebar = !bVisible;
+        }
+
+
+        // Hide/Show the custom toolbar
+        function Button3_onclick() {
+            var bVisible = aceoffixctrl.CustomToolbar;
+            aceoffixctrl.CustomToolbar = !bVisible;
+        }
+
+        // Hide/Show the Office toolbar
+        function Button4_onclick() {
+            var bVisible = aceoffixctrl.OfficeToolbars;
+            aceoffixctrl.OfficeToolbars = !bVisible;
+        }
+
+        function OnAceoffixCtrlInit() {
+            // Hide the custom toolbar
+            aceoffixctrl.CustomToolbar = false;
+        }
+    </script>
+     <form id="form1" runat="server">
+        <input id="Button1" type="button" value="Hide/Show Title Bar" onclick="return Button1_onclick()" />
+        <input id="Button3" type="button" value="Hide/Show Custom Toolbar" onclick="return Button3_onclick()" />
+        <input id="Button4" type="button" value="Hide/Show Office Toolbar" onclick="return Button4_onclick()" />
+        <br /><br />
+        <div style=" width:auto; height:900px;">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>

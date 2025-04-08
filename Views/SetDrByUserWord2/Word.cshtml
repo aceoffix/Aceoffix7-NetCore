@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title></title>
+    <link href="images/csstg.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function Save() {
+            var userName = "@Html.Raw(ViewBag.userName)";
+            var myObject = {};
+            myObject.userName = userName;
+            var params = new URLSearchParams(myObject);
+            var saveUrl = "/SetDrByUserWord2/SaveData";
+            aceoffixctrl.SaveDataPage = `${saveUrl}?${params.toString()}`;
+
+            aceoffixctrl.WebSave();
+        }
+
+        function IsFullScreen() {
+            aceoffixctrl.FullScreen =
+                !aceoffixctrl.FullScreen;
+        }
+
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.AddCustomToolButton("Save", "Save", 1);
+            aceoffixctrl.AddCustomToolButton("Full Screen/Restore", "IsFullScreen", 4);
+        }
+    </script>
+
+</head>
+<body>
+    <span style="width: 100px;"></span>
+    <strong>Current User:</strong>
+    <span style="color: Red;">@Html.Raw(ViewBag.userName)</span>
+    <div style="width: auto; height: 900px;"           
+        @Html.Raw(ViewBag.aceCtrl)
+    </div>
+
+</body>
+</html>

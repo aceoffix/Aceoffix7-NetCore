@@ -1,0 +1,44 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Word.cs" Inherits="Aceoffix7_Net.InsertImgForJs.Word" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>JS Insert Image into Document</title>
+    <script type="text/javascript">
+        // Event handler for when the Aceoffix control is initialized.
+        function OnAceoffixCtrlInit() {
+            aceoffixctrl.CustomToolbar = false;
+        }
+
+        // Event handler that runs after the document has been opened.
+        function AfterDocumentOpened() {
+            /**
+             * aceoffixctrl.word.InsertWebImage(ImageURL, Transparent, Position);
+             * ImageURL: String, the path to the image.
+             * Transparent: Boolean, optional parameter indicating whether the image is transparent. Default value: FALSE (not transparent); TRUE means the image is transparent. Note: The transparent color is white.
+             * Position: Integer, optional parameter indicating whether the image floats above or below the text. Default value: 4 (image floats above the text). 5 indicates the image is placed behind the text.
+             */
+            // This method inserts an image at the current cursor position by default. If you want to insert an image at a specific location in the document, you can insert a bookmark at that location, then set the cursor position to the bookmark before inserting the image.
+            locateBookMark();
+            // Insert the image at the current cursor position with default transparency and floating above the text.
+            aceoffixctrl.word.InsertWebImage("/InsertImgForJs/doc/logo.png", false, 4);
+        }
+
+        // Function to position the cursor to a bookmark location.
+        function locateBookMark() {
+            var bkName = "ACE_logo";
+            // Position the cursor at the bookmark's location.
+            aceoffixctrl.word.LocateDataRegion(bkName);
+        }
+    </script>  
+</head>
+<body>
+    <form id="form2" runat="server">
+        <div style="width:auto; height:900px;">
+            <%=aceCtrl.GetHtml()%>
+        </div>
+    </form>
+</body>
+</html>
+

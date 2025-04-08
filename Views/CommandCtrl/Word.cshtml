@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function OnAceoffixCtrlInit() {
+            // Hide the custom toolbar
+            aceoffixctrl.CustomToolbar = false;
+        }
+        function AfterDocumentOpened() {
+            // Disable saving
+            aceoffixctrl.DisableSave = true;
+            // Disable saving as
+            aceoffixctrl.DisableSaveAs = true;
+            // Disable printing
+            aceoffixctrl.DisablePrint = true;
+            // Disable opening
+            aceoffixctrl.DisableOpen = true;
+        }
+    </script>
+</head>
+<body>
+    <p>Disable "Save", "Save As", "Print", and "Open". Ctrl+S is also disabled.</p>
+    <form id="form1">
+        <div style=" width:auto; height:900px">
+            @Html.Raw(ViewBag.aceCtrl)
+        </div>
+    </form>
+</body>
+</html>
