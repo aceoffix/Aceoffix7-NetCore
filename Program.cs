@@ -1,9 +1,26 @@
+using AceoffixNetCore.AceServer;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Available starting from Aceoffix v7.3.1.1
+builder.Services.AddAceoffixAcewServer();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.SetIsOriginAllowed(_ => true)
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
+                   .AllowCredentials();
+        });
+});
+
 
 var app = builder.Build();
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -13,8 +30,12 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
 }
 
+app.UseCors("AllowAll");
+
 //Aceoffix configuration is mandatory.
-app.UseMiddleware<AceoffixNetCore.AceServer.ServerHandlerMiddleware>();
+//Note: These two lines of code must be placed before app.UseRouting().
+app.UseAceoffixAcewServer();// Available starting from Aceoffix v7.3.1.1
+app.UseMiddleware<ServerHandlerMiddleware>();
 
 app.UseStaticFiles();
 
