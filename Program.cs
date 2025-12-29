@@ -35,7 +35,7 @@ app.UseCors("AllowAll");
 //Aceoffix configuration is mandatory.
 //Note: These two lines of code must be placed before app.UseRouting().
 app.UseAceoffixAcewServer();// Available starting from Aceoffix v7.3.1.1
-app.UseMiddleware<ServerHandlerMiddleware>();
+app.UseMiddleware<AceoffixNetCore.AceServer.ServerHandlerMiddleware>();
 
 app.UseStaticFiles();
 
