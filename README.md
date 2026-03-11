@@ -1,6 +1,6 @@
 # Aceoffix7-NetCore
 
-**Latest Version：7.3.1.1**
+**Latest Version：7.3.1.2**
 
 ### 1. Introduction
 
@@ -45,14 +45,14 @@
 - Add the following code to  your project `Program.cs` file.
 
   ```C#
-  builder.Services.AddAceoffixAcewServer();//Available starting from Aceoffix v7.3.1.1
+  builder.Services.AddAceoffixAcewServer();//Available starting from Aceoffix v7.3.1.2
   ```
 
 - Add the following code to  your project `Program.cs` file.
 
   ```c#
   //Note: These two lines of code must be placed before app.UseRouting().
-  app.UseAceoffixAcewServer();//Available starting from Aceoffix v7.3.1.1
+  app.UseAceoffixAcewServer();//Available starting from Aceoffix v7.3.1.2
   app.UseMiddleware<AceoffixNetCore.AceServer.ServerHandlerMiddleware>();
   ```
 
